@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import './Hero.css';
 import heroImage from './shane-rounce-205187-unsplash.jpg';
-import { home as homeCopy } from '../../content/copy.json';
+import { home as homeCopy } from '../../copy.json';
 import Logo from '../../App/components/Logo';
 
 class Hero extends Component {
