@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from 'react-dom';
+import { hydrate, render } from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 
@@ -14,11 +14,17 @@ import { initFirebase } from './firebase';
 initFirebase();
 let store = createStore(appReducer);
 
-render(
+let root = document.getElementById('root');
+let app = (
   <Provider store={store}>
     <App />
-  </Provider>, 
-  document.getElementById('root')
+  </Provider>
 );
+
+if (root.hasChildNodes()) {
+  hydrate(app, root);
+} else {
+  render(app, root);
+}
 
 registerServiceWorker();
