@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
-import Hero from './Hero';
+import HeroBody from '../../App/components/HeroBody';
 
 class Home extends Component {
   render() {
     return (
-      <Hero />
+      <HeroBody />
     );
   }
 }

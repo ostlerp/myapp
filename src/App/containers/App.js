@@ -1,24 +1,21 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-// import * as firebase from 'firebase';
 
-import Home from '../../Home/containers/Home';
+import Header from '../components/Header';
+import Home from '../../Home/components/Home';
+import Example from '../../Example/containers/Example';
 
 class App extends React.Component {
-  componentDidMount() {
-    // firebase.database().ref('test/').set({
-    //   one: 'one',
-    //   two: 'two',
-    //   three: 3
-    // });
-  }
-
   render() {
     return (
       <Router>
-        <Route exact path="/" component={ Home } />
+        <React.Fragment>
+          <Header />
+          <Route exact path="/" component={ Home } />
+          <Route path="/examples" component={ Example } />
+        </React.Fragment>
       </Router>
-    )
+    );
   }
 }
 

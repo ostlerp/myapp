@@ -1,7 +1,12 @@
 {
+  "app": {
+    "name": "Bulma"
+  },
   "home": {
-    "title": "Wishlists for humans",
-    "subtitle": "Create and share wishlists with friends and family!",
-    "cta": "Get Started!"
+    "title": "React Starter",
+    "subtitle": "Subtitle"
+  },
+  "example": {
+    "explainer": "A few helpful examples of common use cases within a react app."
   }
 }

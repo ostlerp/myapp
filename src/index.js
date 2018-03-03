@@ -9,9 +9,7 @@ import 'bulma/css/bulma.css';
 import appReducer from './appReducer';
 import App from './App/containers/App';
 import registerServiceWorker from './registerServiceWorker';
-import { initFirebase } from './firebase';
 
-initFirebase();
 let store = createStore(appReducer);
 
 let root = document.getElementById('root');

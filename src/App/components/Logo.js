@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 
-import './Logo.css';
+import { app as appCopy } from '../../copy.json';
 
 class Logo extends Component {
   render () {
-    return <div className="app-logo">Bison</div>
+    return (
+      <h1 className="title has-text-light is-size-2">
+        <div className="app-logo">{ appCopy.name }</div>
+      </h1>
+    );
   };
 }
 
