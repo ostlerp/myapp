@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 
+import StatefulComponent from '../components/Stateful';
+
 class Stateful extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: 'State',
+      name: 'State Example',
       items: [],
       inputValue: ''
     };
@@ -21,6 +23,10 @@ class Stateful extends Component {
   }
 
   handleAddItem() {
+    if(!this.state.inputValue) {
+      return;
+    }
+    
     let items = this.state.items || [];
     items.push(this.state.inputValue);
     this.setState({
@@ -38,20 +44,12 @@ class Stateful extends Component {
   
   render() {
     return (
-      <div className="content">
-        <h2>{ this.state.name }</h2>
-        <pre>
-          { JSON.stringify(this.state, null, 2) }
-        </pre>
-        <div className="field">
-          <label className="label">Name</label>
-          <div className="control">
-            <input className="input" type="text" value={ this.state.inputValue } onChange={ this.handleInputChange } placeholder="Set some text for an item" />
-          </div>
-        </div>
-        <a className="button" onClick={ this.handleAddItem }>Add</a>
-        <a className="button" onClick={ this.handleClearItems }>Clear</a>
-      </div>
+      <StatefulComponent 
+        onAddItem={ this.handleAddItem }
+        onClearItems={ this.handleClearItems }
+        onInputChange={ this.handleInputChange }
+        data={ this.state }
+      />
     )
   }
 }
