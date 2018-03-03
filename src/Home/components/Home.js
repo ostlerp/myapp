@@ -5,7 +5,10 @@ import HeroBody from '../../App/components/HeroBody';
 class Home extends Component {
   render() {
     return (
-      <HeroBody />
+      <React.Fragment>
+        <HeroBody />
+        {/* Homepage Content */}
+      </React.Fragment>
     );
   }
 }

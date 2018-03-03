@@ -17,8 +17,10 @@ class Stateful extends Component {
             <input className="input" type="text" value={ data.inputValue } onChange={ onInputChange } placeholder="Set some text for an item" />
           </div>
         </div>
-        <a className="button" onClick={ onAddItem }>Add</a>
-        <a className="button" onClick={ onClearItems }>Clear</a>
+        <div className="buttons">
+          <a className="button is-primary" onClick={ onAddItem }>Add</a>
+          <a className="button" onClick={ onClearItems }>Clear</a>
+        </div>
       </div>
     )
   }

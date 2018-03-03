@@ -10,7 +10,7 @@ class Example extends Component {
     super(props);
 
     this.state = {
-      activeTab: 'stateful'
+      activeTab: 'actions'
     };
 
     // This binding is necessary to make `this` work in the callback
