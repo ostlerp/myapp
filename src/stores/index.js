@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import dogs from './dogs';
+import launches from './launches';
 
 export default combineReducers({
-  dogs
+  launches
 });
