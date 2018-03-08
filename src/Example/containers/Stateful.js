@@ -6,7 +6,7 @@ class Stateful extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: 'State Example',
+      name: 'Component State Example',
       items: [],
       inputValue: ''
     };

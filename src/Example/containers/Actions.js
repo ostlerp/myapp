@@ -38,7 +38,7 @@ class Actions extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    launches: state.launches || {}
+    launches: state.launches
   };
 }
 

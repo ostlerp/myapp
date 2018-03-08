@@ -7,7 +7,8 @@ class Actions extends Component {
 
     return (
       <div className="content">
-        <h3>Get the redux devtools: <a target="_blank" rel="noopener noreferrer" href="https://github.com/gaearon/redux-devtools">https://github.com/gaearon/redux-devtools</a></h3>
+        <h2>Actions and Redux Example</h2>
+        <p>Get the redux devtools: <a target="_blank" rel="noopener noreferrer" href="https://github.com/gaearon/redux-devtools">https://github.com/gaearon/redux-devtools</a></p>
         <div className="buttons">
           <a className={`button is-primary ${isLoading ? 'is-loading' : ''}`} onClick={ onFetchClick }>Fetch API data</a>
           <a className="button" onClick={ onClearClick }>Clear data</a>
