@@ -7,7 +7,7 @@ import thunk from 'redux-thunk';
 import './index.css';
 import 'bulma/css/bulma.css';
 
-import rootReducer from './stores';
+import rootReducer from './rootReducer';
 import App from './App/containers/App';
 import registerServiceWorker from './registerServiceWorker';
 

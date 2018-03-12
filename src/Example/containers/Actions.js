@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import ActionsComponent from '../components/Actions';
-import { getLaunches, clearLaunches } from '../../stores/launches';
+import { getLaunches, clearLaunches } from '../stores/launches';
 
 class Actions extends Component {
   constructor(props) {
@@ -22,8 +22,6 @@ class Actions extends Component {
   
   render() {
     const { launches } = this.props;
-    
-    console.log(launches.data ? Object.values(launches.data) : []);
 
     return (
       <ActionsComponent
